@@ -6,6 +6,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import lombok.*;
 
+import java.io.Serializable;
+
 @Entity
 @Table(name = "tb_item_Pedido")
 @Setter
@@ -13,7 +15,7 @@ import lombok.*;
 @EqualsAndHashCode
 @AllArgsConstructor
 @NoArgsConstructor
-public class JpaItemPedidoEntity {
+public class JpaItemPedidoEntity implements Serializable {
 
     @EmbeddedId
     private JpaItemPedidoPK id;

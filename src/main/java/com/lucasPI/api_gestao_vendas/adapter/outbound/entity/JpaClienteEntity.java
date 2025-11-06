@@ -1,9 +1,7 @@
 package com.lucasPI.api_gestao_vendas.adapter.outbound.entity;
 
 import jakarta.persistence.*;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.io.Serializable;
 import java.util.HashSet;
@@ -13,6 +11,8 @@ import java.util.HashSet;
 @Setter
 @Getter
 @EqualsAndHashCode
+@AllArgsConstructor
+@NoArgsConstructor
 public class JpaClienteEntity implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -3,19 +3,21 @@ package com.lucasPI.api_gestao_vendas.adapter.outbound.entity;
 import com.lucasPI.api_gestao_vendas.adapter.outbound.entity.PK.JpaItemPedidoPK;
 import com.lucasPI.api_gestao_vendas.domain.ItemPedido;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.Set;
 
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
+@Getter
+@Setter
 @Entity
 @Table(name = "tb_Pedido")
-public class JpaPedidoEntity {
+public class JpaPedidoEntity implements Serializable {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private LocalDateTime data;
     @OneToMany(mappedBy = "id.pedido")

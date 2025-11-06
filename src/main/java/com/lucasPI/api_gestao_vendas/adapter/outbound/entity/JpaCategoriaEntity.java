@@ -3,6 +3,7 @@ package com.lucasPI.api_gestao_vendas.adapter.outbound.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.io.Serializable;
 import java.util.HashSet;
 
 @Entity
@@ -12,7 +13,7 @@ import java.util.HashSet;
 @EqualsAndHashCode
 @AllArgsConstructor
 @NoArgsConstructor
-public class JpaCategoriaEntity {
+public class JpaCategoriaEntity implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long categoriaId;

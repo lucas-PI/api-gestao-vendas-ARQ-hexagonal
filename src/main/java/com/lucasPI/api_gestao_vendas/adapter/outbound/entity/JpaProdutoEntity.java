@@ -5,6 +5,7 @@ import com.lucasPI.api_gestao_vendas.domain.ItemPedido;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -15,7 +16,7 @@ import java.util.Set;
 @Setter
 @Getter
 @EqualsAndHashCode
-public class JpaProdutoEntity {
+public class JpaProdutoEntity implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

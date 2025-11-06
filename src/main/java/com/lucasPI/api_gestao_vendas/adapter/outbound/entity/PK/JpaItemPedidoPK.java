@@ -1,5 +1,7 @@
 package com.lucasPI.api_gestao_vendas.adapter.outbound.entity.PK;
 
+import com.lucasPI.api_gestao_vendas.adapter.outbound.entity.JpaPedidoEntity;
+import com.lucasPI.api_gestao_vendas.adapter.outbound.entity.JpaProdutoEntity;
 import com.lucasPI.api_gestao_vendas.domain.Pedido;
 import com.lucasPI.api_gestao_vendas.domain.Produto;
 import jakarta.persistence.Embeddable;
@@ -19,9 +21,9 @@ public class JpaItemPedidoPK implements Serializable {
 
     @ManyToOne
     @JoinColumn(name = "produto_id")
-    private Produto produto;
+    private JpaProdutoEntity produto;
 
     @ManyToOne
     @JoinColumn(name = "pedido_id")
-    private Pedido pedido;
+    private JpaPedidoEntity pedido;
 }
