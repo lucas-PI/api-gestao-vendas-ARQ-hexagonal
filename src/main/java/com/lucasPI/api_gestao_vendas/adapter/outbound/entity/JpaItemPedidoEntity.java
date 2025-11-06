@@ -20,5 +20,4 @@ public class JpaItemPedidoEntity {
     private Integer descontoPorcentagem;
     private Integer quantidade;
     private Double preco;
-
 }
